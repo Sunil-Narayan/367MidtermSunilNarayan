@@ -1,5 +1,1 @@
-data/StateCrimeSpreadsheet.csv
-data/MilitaryTranferSpreadsheet.csv
-data/LethalForceSpreadsheet.csv
-Elevator Pitch.MKV
 .ipynb_checkpoints/
