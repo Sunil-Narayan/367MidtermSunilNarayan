@@ -14338,11 +14338,11 @@ a.anchor-link {
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1">#Lethal Force Frame</span>
-<span class="n">LFF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;LethalForceSpreadsheet.csv&quot;</span><span class="p">)</span>
+<span class="n">LFF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/LethalForceSpreadsheet.csv&quot;</span><span class="p">)</span>
 <span class="c1">#Military Transfer Frame</span>
-<span class="n">MTF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;MilitaryTranferSpreadsheet.csv&quot;</span><span class="p">)</span>
+<span class="n">MTF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/MilitaryTranferSpreadsheet.csv&quot;</span><span class="p">)</span>
 <span class="c1">#State Crime Frame</span>
-<span class="n">SCF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;StateCrimeSpreadsheet.csv&quot;</span><span class="p">)</span>
+<span class="n">SCF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/StateCrimeSpreadsheet.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14633,7 +14633,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">LFF2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;LethalForceSpreadsheet.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">LFF2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/LethalForceSpreadsheet.csv&quot;</span><span class="p">)</span>
 <span class="n">LFF2</span> <span class="o">=</span> <span class="n">LFF2</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;Date of injury resulting in death (month/day/year)&#39;</span><span class="p">]]</span>
 <span class="n">LFF2</span> <span class="o">=</span> <span class="n">LFF2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Date of injury resulting in death (month/day/year)&quot;</span> <span class="p">:</span> <span class="s2">&quot;Year&quot;</span><span class="p">})</span>
 <span class="n">LFF2</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">LFF2</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
@@ -14784,7 +14784,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SCF2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;StateCrimeSpreadsheet.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SCF2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/StateCrimeSpreadsheet.csv&quot;</span><span class="p">)</span>
 <span class="n">SCF2</span> <span class="o">=</span> <span class="n">SCF2</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;report_year&#39;</span><span class="p">,</span> <span class="s1">&#39;violent_crimes&#39;</span><span class="p">]]</span>
 <span class="n">SCF2</span> <span class="o">=</span> <span class="n">SCF2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;report_year&quot;</span> <span class="p">:</span> <span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;violent_crimes&quot;</span> <span class="p">:</span> <span class="s2">&quot;Crimes&quot;</span><span class="p">})</span>
 <span class="n">SCF2</span> <span class="o">=</span> <span class="n">SCF2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">as_index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -15187,16 +15187,16 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The 1208 program was more stringent in how equipment was to be approved to be transferred, thus making it a weaker force contributing to militarization than the 1033 program. In order to measure the difference, let's look at the total cost of transfers per year from 1991 (the start of the 1208 program) to the present day.</p>
+<p>The 1208 program was more stringent in how equipment was to be approved to be transferred, so it might not be accurate to consider it a force contributing to militarization at the same level as the 1033 program. If the 1208 program transfers were negligable, it would prove that the downward shift in 1991 was caused by some other factor. If not, it would still be possible that militarization programs were responsible for decreasing crime. In order to measure the difference, let's look at the total cost of transfers per year from 1991 (the start of the 1208 program) to the present day.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">MTF2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;MilitaryTranferSpreadsheet.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">MTF2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/MilitaryTranferSpreadsheet.csv&quot;</span><span class="p">)</span>
 <span class="n">MTF2</span> <span class="o">=</span> <span class="n">MTF2</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Ship Date&#39;</span><span class="p">]]</span>
 <span class="n">MTF2</span><span class="p">[</span><span class="s1">&#39;Ship Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">MTF2</span><span class="p">[</span><span class="s1">&#39;Ship Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
 <span class="n">MTF2</span><span class="p">[</span><span class="s1">&#39;Ship Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">MTF2</span><span class="p">[</span><span class="s1">&#39;Ship Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -15264,10 +15264,10 @@ a.anchor-link {
 <p>Based on section 1, it seems that the number of police incidents resulting in death has risen from 2000 onward. Based on section 2, it also seems that the rate of violent crime across the US has steadily fallen since the year 1991. It also seems like both of these have coincided with a drastic increase in the value of military equipment transferred to local law enforcement since 1991 (See the visualization section for more graphs depicting these). In order to determine a mathematical correlation between these three variables, I ran a pearson's r test on the militarization metric relative to deaths and the militarization metric relative to state crime.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">CrimeCorrilation</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">MTF</span><span class="p">[</span><span class="s2">&quot;Cost&quot;</span><span class="p">],</span> <span class="n">SCF</span><span class="p">[</span><span class="s2">&quot;Crimes&quot;</span><span class="p">])</span>
@@ -15279,28 +15279,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The corrilation between the annual amount of military equipment transferred and state crime rate is: (-0.7433680761523075, 0.0014921185209890435)
-The corrilation between the annual amount of military equipment transferred and rate of lethal force is (0.7614336024642523, 0.000973761918409527)
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
